@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply font-body bg-dusk-50 text-dusk-900 dark:bg-dusk-950 dark:text-dusk-100;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 135, 184, 0.35);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 135, 184, 0.6);
+}
+
+/* Chat bubble tails using clip-path for a distinctive shape (not generic rounded rectangles) */
+.bubble-sent {
+  border-radius: 18px 18px 4px 18px;
+}
+
+.bubble-received {
+  border-radius: 18px 18px 18px 4px;
+}
+
+.focus-ring {
+  @apply outline-none ring-2 ring-teal ring-offset-2 ring-offset-dusk-50 dark:ring-offset-dusk-950;
+}
